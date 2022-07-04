@@ -1,0 +1,46 @@
+/*! 9 times out of 10, it's better to use 'box-sizing' with the all selector (*) for this property isn't inherit by others. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Splash", cursive;
+  background: linear-gradient(#e9edc9, #ccd5ae);
+}
+
+.title {
+  text-align: center;
+  font-size: 3em;
+}
+
+.container-photos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.container-photos__item {
+  width: 25%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 4px;
+  padding: 0 2px;
+  border-radius: 10px;
+}
+
+@media (max-width: 990px) {
+  .container-photos__item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 668px) {
+  .container-photos__item {
+    width: 100%;
+  }
+}
